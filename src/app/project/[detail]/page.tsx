@@ -93,6 +93,7 @@ function DetailPage() {
           <p className="text-[32px] font-bold border-b-2 border-gray-300 pb-2 mb-6">
             상세 이미지
           </p>
+          <p>이미지를 클릭하시면 자세히 확인하실 수 있습니다.</p>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 overflow-hidden">
             {project.detailImage.map((image, index) => (
               <div
