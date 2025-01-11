@@ -37,7 +37,7 @@ function Skill() {
       <section>
         <article className="p-2">
           <p className="text-4xl font-bold">SKILL</p>
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 m-4">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 m-4">
             {MySkill.map((skill) => (
               <div key={skill.content}>
                 <Badge icon={skill.icon} content={skill.content} />
