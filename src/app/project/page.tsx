@@ -1,16 +1,18 @@
 "use client";
 
+import React, { useEffect, useRef } from "react";
+import { useSearchParams } from "next/navigation";
 import ProjectList from "@/components/projcet/ProjectList";
-import SectionHandler from "@/components/projcet/SectionHandler";
+import ProjectPage from "@/components/projcet/ProjectPage";
 import RemoteControl from "@/components/RemoteControl";
 import { projectData } from "@/data/projectData";
-import React, { useRef } from "react"; // 새로 분리된 컴포넌트
 
 const Page = () => {
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const projects = projectData;
+  const searchParams = useSearchParams();
+  const sectionQuery = searchParams.get("section");
 
-  // ref 추가 시 불변성 유지
   const addSectionRef = (el: HTMLDivElement | null) => {
     if (el && !sectionRefs.current.includes(el)) {
       sectionRefs.current = [...sectionRefs.current, el];
@@ -28,16 +30,39 @@ const Page = () => {
     }
   };
 
+  useEffect(() => {
+    if (sectionQuery) {
+      const sectionIndex = parseInt(sectionQuery, 10) - 1;
+      if (
+        !isNaN(sectionIndex) &&
+        sectionIndex >= 0 &&
+        sectionIndex < projects.length
+      ) {
+        scrollToSection(sectionIndex);
+      }
+    }
+  }, [sectionQuery, projects]);
+
   return (
     <main className="w-full h-screen">
       <section className="h-screen">
         <ProjectList onScrollToSection={scrollToSection} />
       </section>
-      <SectionHandler
-        projects={projects}
-        sectionRefs={sectionRefs}
-        addSectionRef={addSectionRef}
-      />
+      {projects.map((project, index) => (
+        <section
+          key={project.name}
+          ref={addSectionRef}
+          className={`h-screen flex flex-col items-center justify-center ${
+            index === 0
+              ? "bg-blue-500"
+              : index === 1
+              ? "bg-violet-500"
+              : "bg-emerald-500"
+          }`}
+        >
+          <ProjectPage project={project} />
+        </section>
+      ))}
       <div className="flex justify-center items-center">
         <RemoteControl />
       </div>
