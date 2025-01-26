@@ -28,13 +28,17 @@ const Page = () => {
         block: "start",
         inline: "start",
       });
-    } 
+    }
   };
 
   useEffect(() => {
     if (sectionQuery) {
       const sectionIndex = parseInt(sectionQuery, 10) - 1;
-      if (!isNaN(sectionIndex) && sectionIndex >= 0 && sectionIndex < projects.length) {
+      if (
+        !isNaN(sectionIndex) &&
+        sectionIndex >= 0 &&
+        sectionIndex < projects.length
+      ) {
         scrollToSection(sectionIndex);
       }
     }
@@ -42,30 +46,9 @@ const Page = () => {
 
   return (
     <main className="w-full h-screen">
-      
       <section className="h-screen">
         <ProjectList onScrollToSection={scrollToSection} />
       </section>
-
-      {/* 각 섹션에 ref 추가 */}
-      {/* <section
-        ref={addSectionRef}
-        className="h-screen flex flex-col items-center justify-center bg-blue-500"
-      >
-        <ProjectPage project={projects[0]} />
-      </section>
-      <section
-        ref={addSectionRef}
-        className="h-screen flex flex-col items-center justify-center bg-violet-500"
-      >
-        <ProjectPage project={projects[1]} />
-      </section>
-      <section
-        ref={addSectionRef}
-        className="h-screen flex flex-col items-center justify-center bg-emerald-500"
-      >
-        <ProjectPage project={projects[2]} />
-      </section> */}
       {projects.map((project, index) => (
         <section
           key={project.name}
@@ -86,6 +69,6 @@ const Page = () => {
       </div>
     </main>
   );
-}
+};
 
 export default Page;
