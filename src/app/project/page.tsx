@@ -4,11 +4,14 @@ import ProjectList from "@/components/projcet/ProjectList";
 import ProjectPage from "@/components/projcet/ProjectPage";
 import RemoteControl from "@/components/RemoteControl";
 import { projectData } from "@/data/projectData";
-import React, { useRef } from "react";
+import { useSearchParams } from "next/navigation";
+import React, { useEffect, useRef } from "react";
 
 const Page = () => {
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const projects = projectData;
+  const searchParams = useSearchParams();
+  const sectionQuery = searchParams.get("section");
 
   // ref 추가 시 불변성 유지
   const addSectionRef = (el: HTMLDivElement | null) => {
@@ -28,6 +31,15 @@ const Page = () => {
     } 
   };
 
+  useEffect(() => {
+    if (sectionQuery) {
+      const sectionIndex = parseInt(sectionQuery, 10) - 1;
+      if (!isNaN(sectionIndex) && sectionIndex >= 0 && sectionIndex < projects.length) {
+        scrollToSection(sectionIndex);
+      }
+    }
+  }, [sectionQuery]);
+
   return (
     <main className="w-full h-screen">
       
@@ -36,7 +48,7 @@ const Page = () => {
       </section>
 
       {/* 각 섹션에 ref 추가 */}
-      <section
+      {/* <section
         ref={addSectionRef}
         className="h-screen flex flex-col items-center justify-center bg-blue-500"
       >
@@ -53,7 +65,22 @@ const Page = () => {
         className="h-screen flex flex-col items-center justify-center bg-emerald-500"
       >
         <ProjectPage project={projects[2]} />
-      </section>
+      </section> */}
+      {projects.map((project, index) => (
+        <section
+          key={project.name}
+          ref={addSectionRef}
+          className={`h-screen flex flex-col items-center justify-center ${
+            index === 0
+              ? "bg-blue-500"
+              : index === 1
+              ? "bg-violet-500"
+              : "bg-emerald-500"
+          }`}
+        >
+          <ProjectPage project={project} />
+        </section>
+      ))}
       <div className="flex justify-center items-center">
         <RemoteControl />
       </div>
