@@ -31,7 +31,7 @@ function ProjectPage({ project }: { project: Project }) {
     github,
     velog,
     type,
-    contribution,
+    // contribution,
     detail
   } = project;
   // const [selectIndex, setSelectIndex] = useState(0);
@@ -53,8 +53,8 @@ function ProjectPage({ project }: { project: Project }) {
   // };
 
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-2 lg:gap-8 w-full h-screen">
-      <article className="flex flex-col text-white gap-2 pt-28 px-28 w-full lg:w-[800px]">
+    <section className="flex flex-col xl:flex-row items-center justify-center 2xl:justify-between gap-2 2xl:gap-8 w-full h-screen">
+      <article className="flex flex-col text-white gap-2 pt-28 px-14 xl:px-12 2xl:px-28 w-full 2xl:w-[800px]">
         <div className="flex flex-row items-center gap-4">
           <div className="relative w-[80px] h-[80px]">
             <Image
@@ -69,7 +69,7 @@ function ProjectPage({ project }: { project: Project }) {
             <p className="font-bold text-[18px] lg:text-[24px]">{name}</p>
             <p className="text-sm">{date}</p>
             <p className="text-sm">{type}</p>
-            <p className="text-xs">기여도: {contribution}</p>
+            {/* <p className="text-xs">기여도: {contribution}</p> */}
           </div>
         </div>
         <p>{description}</p>

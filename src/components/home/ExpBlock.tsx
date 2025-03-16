@@ -11,7 +11,7 @@ type Exp = {
 
 function ExpBlock({ data }: { data: Exp }) {
   return (
-    <section className="flex flex-col h-[420px] border-[1px] border-transparent rounded-lg shadow-md bg-neutral-900 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer ">
+    <section className="flex flex-col w-[300px] h-[420px] border-[1px] border-transparent rounded-lg shadow-md bg-neutral-900 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer ">
       <div className="relative w-full h-[90px] lg:h-[180px] overflow-hidden rounded-t-lg">
         <Image
           src={data.image}

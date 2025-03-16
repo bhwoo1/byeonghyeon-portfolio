@@ -11,10 +11,10 @@ function RemoteControl() {
   };
 
   return (
-    <div className="fixed bottom-0 right-0 flex-col gap-4 lg:gap-8 flex justify-around items-center text-center py-3 px-8 text-white mb-12 z-30">
+    <div className="fixed bottom-0 right-0 flex-col gap-4 xl:gap-8 flex justify-around items-center text-center py-3 px-8 text-white mb-12 z-30">
       {/* Scroll to Top Button */}
       <div
-        className="flex flex-col group cursor-pointer p-2 bg-black rounded-full w-12 lg:w-16 h-12 lg:h-16 justify-center items-center transition-transform duration-300 ease-in-out hover:scale-110"
+        className="flex flex-col group cursor-pointer p-2 bg-black rounded-full w-12 xl:w-16 h-12 xl:h-16 justify-center items-center transition-transform duration-300 ease-in-out hover:scale-110"
         onClick={scrollToTop}
       >
         <FaArrowUp className="text-xl lg:text-2xl group-hover:text-blue-400 transition duration-300" />

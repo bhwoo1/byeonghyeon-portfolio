@@ -35,9 +35,9 @@ function DetailPage() {
 
   return (
     <PageModal>
-      <main className="w-full px-2 lg:px-48 mt-48 gap-4">
-        <section className="px-2 lg:px-48 hidden lg:flex">
-          <div className="relative  lg:w-[50px] lg:h-[50px]">
+      <main className="w-full px-2 lg:px-24 2xl:px-48 mt-48 gap-4">
+        <section className="px-2 2xl:px-48 hidden lg:flex">
+          <div className="relative lg:w-[50px] lg:h-[50px]">
             <Image
               src={project.logo}
               fill
@@ -49,7 +49,7 @@ function DetailPage() {
             />
           </div>
         </section>
-        <section className="px-2 lg:px-48 ">
+        <section className="px-2 2xl:px-48 ">
           <article className="flex flex-col gap-1">
             <p className="font-bold text-[48px]">{project.name}</p>
             <p>{project.date}</p>

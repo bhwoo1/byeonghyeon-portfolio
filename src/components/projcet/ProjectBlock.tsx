@@ -13,9 +13,9 @@ function ProjectBlock({ project }: { project: Project }) {
   const { logo, name, date } = project;
 
   return (
-    <div className="bg-white w-[100px] h-auto lg:w-[400px] lg:h-[200px] cursor-pointer text-center flex flex-col lg:flex-row items-center rounded-xl shadow-lg overflow-hidden transition-all transform group hover:shadow-2xl">
+    <div className="bg-white w-[150px] h-[200px] 2xl:w-[400px] 2xl:h-[200px] xl:w-[300px] xl:h-[100px] cursor-pointer text-center flex flex-col xl:flex-row items-center rounded-xl shadow-lg overflow-hidden transition-all transform group hover:shadow-2xl">
       {/* 이미지 영역 */}
-      <div className="relative w-[100px] h-[50px] lg:w-[200px] lg:h-[100px] group-hover:scale-110 transition">
+      <div className="relative w-[100px] h-[50px] xl:w-[200px] xl:h-[100px] group-hover:scale-110 transition">
         <Image
           src={logo}
           fill

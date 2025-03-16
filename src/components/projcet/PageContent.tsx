@@ -7,19 +7,18 @@ import ProjectPage from "@/components/projcet/ProjectPage";
 import RemoteControl from "@/components/RemoteControl";
 import { projectData } from "@/data/projectData";
 
-
 function PageContent() {
     const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
     const projects = projectData;
     const searchParams = useSearchParams();
     const sectionQuery = searchParams.get("section");
-  
+
     const addSectionRef = (el: HTMLDivElement | null) => {
       if (el && !sectionRefs.current.includes(el)) {
         sectionRefs.current = [...sectionRefs.current, el];
       }
     };
-  
+
     const scrollToSection = (index: number) => {
       const section = sectionRefs.current[index];
       if (section) {
@@ -30,7 +29,7 @@ function PageContent() {
         });
       }
     };
-  
+
     useEffect(() => {
       if (sectionQuery) {
         const sectionIndex = parseInt(sectionQuery, 10) - 1;
@@ -43,17 +42,17 @@ function PageContent() {
         }
       }
     }, [sectionQuery, projects]);
-  
+
     return (
-      <main className="w-full h-screen">
-        <section className="h-screen">
+      <main className="w-screen h-screen overflow-x-hidden">
+        <section className="h-screen w-screen">
           <ProjectList onScrollToSection={scrollToSection} />
         </section>
         {projects.map((project, index) => (
           <section
             key={project.name}
             ref={addSectionRef}
-            className={`h-screen flex flex-col items-center justify-center ${
+            className={`w-screen h-screen flex flex-col items-center justify-center ${
               index === 0
                 ? "bg-blue-500"
                 : index === 1
@@ -64,11 +63,11 @@ function PageContent() {
             <ProjectPage project={project} />
           </section>
         ))}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center w-screen">
           <RemoteControl />
         </div>
       </main>
     );
 }
 
-export default PageContent
+export default PageContent;

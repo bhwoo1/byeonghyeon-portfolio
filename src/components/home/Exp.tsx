@@ -9,7 +9,7 @@ function Exp() {
       <section>
         <article className="p-2">
           <p className="text-4xl font-bold">EXPERIENCE</p>
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 m-4">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-96 m-4">
             {apData.map((data) => (
               <a
                 key={data.title}
