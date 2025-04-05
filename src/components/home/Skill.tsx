@@ -2,7 +2,7 @@ import React from "react";
 import { FaReact } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiRecoil, SiTypescript  } from "react-icons/si";
+import { SiTypescript  } from "react-icons/si";
 import Badge from "../Badge";
 
 function Skill() {
