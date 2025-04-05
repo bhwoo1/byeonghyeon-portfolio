@@ -23,14 +23,14 @@ function Skill() {
       icon: <RiTailwindCssFill />,
       content: "Tailwind",
     },
-    {
-      icon: <SiRecoil />,
-      content: "Recoil",
-    },
-    {
-      icon: <></>,
-      content: "Zustand"
-    }
+    // {
+    //   icon: <SiRecoil />,
+    //   content: "Recoil",
+    // },
+    // {
+    //   icon: <></>,
+    //   content: "Zustand"
+    // }
   ];
   return (
     <div className="w-full lg:w-2/3 lg:p-24 p-20 flex flex-col gap-4">
