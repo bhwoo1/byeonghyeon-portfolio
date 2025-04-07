@@ -116,4 +116,46 @@ export const projectData = [
       "PC와 모바일 모두 호환되는 반응형 디자인",
     ],
   },
+  {
+    logo: "/hashtag_logo.png",
+    name: "#해시태그#생성기",
+    date: "2025.04",
+    images: ["/Hashtag.png"],
+    description:
+      "사진을 업로드해 사진과 어울리는 SNS용 해시태그를 생성해주는 서비스입니다.",
+    type: "미니 프로젝트",
+    contribution: "100%",
+    href: "https://hash-tag-generator-xi.vercel.app/",
+    velog: "https://velog.io/@bhwoo1/series/",
+    github: "https://github.com/bhwoo1/HashTagGenerator",
+    stack: [
+      ["Next.JS", "TypeScript"],
+      ["Zustand", "React-Query"],
+      ["Tailwind"],
+      ["Google Cloud Vision API", "OpenAI"],
+    ],
+    detail: "hashtag",
+    description_long: `해시태그는 주로 소셜미디어에서 관련된 게시물끼리 묶어주는 역할을 합니다.
+    
+    해시태그를 이용하면 SNS에서 더 많은 사람들에게 노출될 수 있으며, 팔로워가 아니더라도 해당 게시글을 볼 수 있게 됩니다.
+
+    평소 취미로 사진을 자주 찍는 저는 SNS에 사진을 업로드할 때마다 항상 어떤 해시태그를 사용해야할지 고민합니다.
+
+    #해시태그 #생성기를 이용하면 고민하지 않고 자동으로 해시태그를 생성해줍니다.
+
+    `,
+
+    detailImage: [
+      "/Hashtag/Hashtag 1.jpg",
+      "/Hashtag/Hashtag 2.jpg",
+      "/Hashtag/Hashtag 3.jpg",
+      "/Hashtag/Hashtag 4.jpg",
+      "/Hashtag/Hashtag 5.jpg",
+    ],
+    function: [
+      "이미지를 업로드하면 Cloud Vision API가 이미지를 분석",
+      "분석한 결과를 바탕으로 해시태그 생성",
+      "사용자는 한국어, 영어 및 생성 갯수를 설정하여 원하는 언어로, 원하는 갯수만큼 생성할 수 있음",
+    ],
+  },
 ];

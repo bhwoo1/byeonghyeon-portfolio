@@ -41,7 +41,7 @@ function DetailPage() {
             <Image
               src={project.logo}
               fill
-              objectFit="scale"
+              objectFit="contain"
               alt="main_images"
               onContextMenu={(e) => e.preventDefault()}
               onDragStart={(e) => e.preventDefault()}

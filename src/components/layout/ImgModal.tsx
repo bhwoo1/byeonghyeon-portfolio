@@ -11,11 +11,12 @@ function ImgModal({ img, modalClose }: { img: string; modalClose: () => void }) 
     >
       {/* 모달 컨텐츠 */}
       <div
-        className="bg-[#222222] p-6 rounded-lg w-full lg:w-1/2 h-auto relative overflow-y-auto"
+        className="bg-[#222222] p-6 rounded-lg w-full lg:w-1/2 h-[700px] relative overflow-y-auto"
         onClick={(e) => e.stopPropagation()} // 모달 내부 클릭은 이벤트 전파를 막음
       >
-        <div className="w-auto h-auto flex justify-center">
-          <Image src={img} width={800} height={600} alt="modal_img" className="rounded-lg" />
+        <div className="w-[400px] h-[400px] flex justify-center">
+          <Image src={img} fill
+            alt="modal_img" className="rounded-lg object-contain" />
         </div>
 
         {/* Close 버튼 */}
