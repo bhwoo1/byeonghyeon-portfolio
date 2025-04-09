@@ -126,7 +126,7 @@ export const projectData = [
     type: "미니 프로젝트",
     contribution: "100%",
     href: "https://hash-tag-generator-xi.vercel.app/",
-    velog: "https://velog.io/@bhwoo1/series/",
+    velog: "",
     github: "https://github.com/bhwoo1/HashTagGenerator",
     stack: [
       ["Next.JS", "TypeScript"],

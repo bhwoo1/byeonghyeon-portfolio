@@ -100,7 +100,9 @@ function DetailPage() {
             <p className="text-[32px] font-bold border-b-2 border-gray-300 pb-2 mb-6">
               상세 이미지
             </p>
-            <p className="text-xs mb-4">이미지를 클릭하시면 자세히 확인하실 수 있습니다.</p>
+            <p className="text-xs mb-4">
+              이미지를 클릭하시면 자세히 확인하실 수 있습니다.
+            </p>
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 overflow-hidden">
               {project.detailImage.map((image, index) => (
                 <div
@@ -131,14 +133,20 @@ function DetailPage() {
                 Github
               </p>
             </div>
-            <div className="flex flex-col group cursor-pointer p-2 bg-black rounded-full w-12 lg:w-20 h-12 lg:h-20 justify-center items-center transition-transform duration-300 ease-in-out hover:scale-110">
-              <a href={project.velog} target="_blank" rel="noopener noreferrer">
-                <SiVelog className="text-lg lg:text-3xl group-hover:text-blue-400 transition duration-300" />
-              </a>
-              <p className="hidden lg:flex font-bold group-hover:text-blue-400 transition duration-300">
-                개발일지
-              </p>
-            </div>
+            {project.velog && (
+              <div className="flex flex-col group cursor-pointer p-2 bg-black rounded-full w-12 lg:w-20 h-12 lg:h-20 justify-center items-center transition-transform duration-300 ease-in-out hover:scale-110">
+                <a
+                  href={project.velog}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SiVelog className="text-lg lg:text-3xl group-hover:text-blue-400 transition duration-300" />
+                </a>
+                <p className="hidden lg:flex font-bold group-hover:text-blue-400 transition duration-300">
+                  개발일지
+                </p>
+              </div>
+            )}
             {project.href && (
               <div className="flex flex-col group cursor-pointer p-2 bg-black rounded-full w-12 lg:w-20 h-12 lg:h-20 justify-center items-center transition-transform duration-300 ease-in-out hover:scale-110">
                 <a
