@@ -76,46 +76,46 @@ export const projectData = [
       "관광지 추천 및 베스트 관광지 필터링",
     ],
   },
-  {
-    logo: "/tripto_logo.png",
-    name: "TRipTo",
-    date: "2024.12",
-    images: ["/TRipTo.png"],
-    description:
-      "사용자의 위치를 기반으로 관광지를 추천 받고 관광지의 유형별로 찾아볼 수 있는 서비스입니다.",
-    type: "미니 프로젝트",
-    contribution: "100%",
-    href: "https://tripto-xi.vercel.app/",
-    velog: "https://velog.io/@bhwoo1/series/TRipTo",
-    github: "https://github.com/bhwoo1/TRipTo",
-    stack: [
-      ["Next.JS", "TypeScript"],
-      ["Zustand", "React-Query"],
-      ["Tailwind", "Shadcn-UI"],
-      ["MySQL"],
-    ],
-    detail: "tripto",
-    description_long: `UI/UX 및 반응형 디자인, Next.JS의 API Routes를 공부하는 목적으로 진행하였습니다. 
+  // {
+  //   logo: "/tripto_logo.png",
+  //   name: "TRipTo",
+  //   date: "2024.12",
+  //   images: ["/TRipTo.png"],
+  //   description:
+  //     "사용자의 위치를 기반으로 관광지를 추천 받고 관광지의 유형별로 찾아볼 수 있는 서비스입니다.",
+  //   type: "미니 프로젝트",
+  //   contribution: "100%",
+  //   href: "https://tripto-xi.vercel.app/",
+  //   velog: "https://velog.io/@bhwoo1/series/TRipTo",
+  //   github: "https://github.com/bhwoo1/TRipTo",
+  //   stack: [
+  //     ["Next.JS", "TypeScript"],
+  //     ["Zustand", "React-Query"],
+  //     ["Tailwind", "Shadcn-UI"],
+  //     ["MySQL"],
+  //   ],
+  //   detail: "tripto",
+  //   description_long: `UI/UX 및 반응형 디자인, Next.JS의 API Routes를 공부하는 목적으로 진행하였습니다. 
     
-    사용자의 GPS 정보를 받아와 Naver 지도 API의 Reverse Geocoding 모듈을 이용해 사용자가 위치한 곳의 정보를 취득해 해당 지역의 관광지를 소개합니다.
+  //   사용자의 GPS 정보를 받아와 Naver 지도 API의 Reverse Geocoding 모듈을 이용해 사용자가 위치한 곳의 정보를 취득해 해당 지역의 관광지를 소개합니다.
 
-    관광지를 총 10개의 태그로 분류하였으며 페이지에 접속할 때마다 랜덤으로 10개의 태그 중 1개를 선택해 해당 태그에 해당하는 관광지를 소개하며, 사용자는 검색을 통해 관광지 정보를 얻을 수 있습니다.
+  //   관광지를 총 10개의 태그로 분류하였으며 페이지에 접속할 때마다 랜덤으로 10개의 태그 중 1개를 선택해 해당 태그에 해당하는 관광지를 소개하며, 사용자는 검색을 통해 관광지 정보를 얻을 수 있습니다.
 
-    MySQL을 이용해 DB를 구축하였으며 현재 등록되어 있는 관광지 정보는 더미 데이터로 구성하였습니다.
-    `,
+  //   MySQL을 이용해 DB를 구축하였으며 현재 등록되어 있는 관광지 정보는 더미 데이터로 구성하였습니다.
+  //   `,
 
-    detailImage: [
-      "/tripto/tripto 1.jpg",
-      "/tripto/tripto 2.jpg",
-      "/tripto/tripto 3.jpg",
-      "/tripto/tripto 4.jpg",
-    ],
-    function: [
-      "API Routes를 활용해 별도의 웹 서버 없이 DB와 통신",
-      "React-Query를 활용해 무한 스크롤 구현",
-      "PC와 모바일 모두 호환되는 반응형 디자인",
-    ],
-  },
+  //   detailImage: [
+  //     "/tripto/tripto 1.jpg",
+  //     "/tripto/tripto 2.jpg",
+  //     "/tripto/tripto 3.jpg",
+  //     "/tripto/tripto 4.jpg",
+  //   ],
+  //   function: [
+  //     "API Routes를 활용해 별도의 웹 서버 없이 DB와 통신",
+  //     "React-Query를 활용해 무한 스크롤 구현",
+  //     "PC와 모바일 모두 호환되는 반응형 디자인",
+  //   ],
+  // },
   {
     logo: "/hashtag_logo.png",
     name: "#해시태그#생성기",
@@ -152,6 +152,41 @@ export const projectData = [
       "이미지를 업로드하면 Cloud Vision API가 이미지를 분석",
       "분석한 결과를 바탕으로 해시태그 생성",
       "사용자는 한국어, 영어 및 생성 갯수를 설정하여 원하는 언어로, 원하는 갯수만큼 생성할 수 있음",
+    ],
+  },
+  {
+    logo: "/TravelPlanner_logo.png",
+    name: "떠나봄",
+    date: "진행 중",
+    images: ["/default.png"],
+    description:
+      "대신 여행 계획을 세워주는 AI 기반 여행 플래너입니다.",
+    type: "미니 프로젝트",
+    contribution: "100%",
+    href: "",
+    velog: "",
+    github: "https://github.com/bhwoo1/TravelPlanner",
+    stack: [
+      ["Next.JS", "TypeScript"],
+      ["Zustand", "React-Query"],
+      ["Tailwind"],
+      ["OpenAI", "Google Maps JavaScript API"],
+    ],
+    detail: "TravelPlanner",
+    description_long: `사용자는 출발지와 여행지, 그리고 여행지까지의 이동 수단, 여행지에서 하고 싶은 일을 입력하면 AI가 분석해 자동으로 해당 여행지에서의 일정을 세워줍니다.
+
+     구글 지도와 연동해 AI가 소개해 준 장소의 위치를 쉽게 알 수 있습니다.
+    
+    
+     여행 계획을 세우는데 큰 고민하지 않고 오로지 즐거운 여행만 즐길 수 있습니다.`,
+
+    detailImage: [
+      "/TravelPlanner/Planner_1.gif",
+    ],
+    function: [
+      "사용자가 입력한 정보들을 바탕으로 AI가 자동으로 계획 생성",
+      "구글 지도를 이용해 AI가 추천해 준 장소들을 파악할 수 있음",
+      "사용자 계정 로그인을 통해 사용자가 생성한 계획을 저장하고 관리할 수 있음(예정)",
     ],
   },
 ];
