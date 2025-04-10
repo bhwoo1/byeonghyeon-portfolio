@@ -52,6 +52,8 @@ function ProjectPage({ project }: { project: Project }) {
   //   }
   // };
 
+  
+
   return (
     <section className="flex flex-col xl:flex-row items-center justify-center 2xl:justify-between gap-2 2xl:gap-8 w-full h-screen">
       <article className="flex flex-col text-white gap-2 pt-28 px-14 xl:px-12 2xl:px-28 w-full 2xl:w-[800px]">
