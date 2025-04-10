@@ -154,7 +154,7 @@ export const projectData = [
   },
   {
     logo: "/TravelPlanner_logo.png",
-    name: "떠나봄 - AI 여행 플래너",
+    name: "떠나봄",
     date: "진행 중",
     images: ["/default.png"],
     description: "대신 여행 계획을 세워주는 AI 기반 여행 플래너입니다.",
